@@ -51,3 +51,17 @@ src/
     │   └── OrdersController.cs
     ├── Program.cs
     └── MyApp.Api.csproj
+
+
+## Aspire
+dotnet new aspire-apphost -o Learning.AppHost
+dotnet new aspire-servicedefaults -o Learning.ServiceDefaults
+
+
+.NET Aspire App Host               aspire-apphost          [C#]      Common/.NET Aspire/Cloud
+.NET Aspire Empty App              aspire                  [C#]      Common/.NET Aspire/Cloud/Web/Web API/API/Service
+.NET Aspire Service Defaults       aspire-servicedefaults  [C#]      Common/.NET Aspire/Cloud/Web/Web API/API/Service
+.NET Aspire Starter App            aspire-starter          [C#]      Common/.NET Aspire/Blazor/Web/Web API/API/Service/Cloud/Test/MSTest/NUnit/xUnit
+.NET Aspire Test Project (MSTest)  aspire-mstest           [C#]      Common/.NET Aspire/Cloud/Web/Web API/API/Service/Test/MSTest
+.NET Aspire Test Project (NUnit)   aspire-nunit            [C#]      Common/.NET Aspire/Cloud/Web/Web API/API/Service/Test/NUnit
+.NET Aspire Test Project (xUnit)   aspire-xunit            [C#]      Common/.NET Aspire/Cloud/Web/Web API/API/Service/Test/xUnit
