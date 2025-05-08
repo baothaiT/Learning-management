@@ -25,7 +25,7 @@ public static class ServiceExtensions
     {
         return services.AddCors(options =>
         {
-            options.AddPolicy("AllowAllOrigins",
+            options.AddPolicy(Contants.AllowAllOrigins,
                 builder =>
                 {
                     builder.AllowAnyOrigin()

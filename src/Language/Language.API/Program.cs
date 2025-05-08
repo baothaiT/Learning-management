@@ -16,15 +16,9 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-    app.MapOpenApi();
-    app.UseSwaggerUI(options => // UseSwaggerUI is called only in Development.
-    {
-        options.RoutePrefix = string.Empty; // Set Swagger UI at the app's root
-        options.SwaggerEndpoint("/openapi/v1.json", "v1");
-        
-    });
+    app.AddSwagger();
 }
-app.UseCors("AllowAllOrigins");
+app.UseCORS();
 app.UseRouting();
 app.UseHttpsRedirection();
 app.MapControllers();
