@@ -3,10 +3,11 @@ Learning-management
 
 
 # Architectures
-1. LanguageAPI
-2. UserAPI
-3. GatewayAPI
-4. Orchestrator-Even-Stream
+1. Language.API
+2. User.API
+3. Gateway.API
+4. Orchestrator-Even-Stream.Worker
+5. Email.API
 
 
 

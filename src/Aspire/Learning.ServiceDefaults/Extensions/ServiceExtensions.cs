@@ -1,13 +1,15 @@
 using System;
+using System.Reflection;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Learning.ServiceDefaults.Extensions;
 
 public static class ServiceExtensions
 {
-
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
+        
         // Register your services here
         // Example: services.AddScoped<IMyService, MyService>();
         return services;
@@ -15,7 +17,7 @@ public static class ServiceExtensions
 
     public static IServiceCollection AddSwagger(this IServiceCollection services)
     {
-
+        services.AddOpenApi();
         return services.AddSwaggerGen(c =>
         {
             c.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo { Title = "My API", Version = "v1" });

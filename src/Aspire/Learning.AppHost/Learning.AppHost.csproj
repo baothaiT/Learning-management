@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Language\LanguageAPI\Language.API.csproj" />
+    <ProjectReference Include="..\..\Language\Language.API\Language.API.csproj" />
   </ItemGroup>
 
 </Project>
