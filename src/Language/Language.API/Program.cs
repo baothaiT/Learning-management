@@ -16,7 +16,7 @@ builder.Services.AddControllers(options =>
 });
 //builder.AddServiceDefaults();
 var config = ConfigurationBuilderExtensions.GetAppSetting();
-string DefaultConnection = config.GetConnectionString("DefaultConnection");
+string DefaultConnection = config.GetConnectionString("LanguageDb");
 builder.Services.AddInfrastructure(DefaultConnection);
 
 builder.Services.AddSwagger();
@@ -30,6 +30,13 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.AddSwagger();
+}
+
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+
+    SeedData.Initialize(services);
 }
 app.UseCORS();
 app.UseRouting();
